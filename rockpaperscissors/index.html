@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rock Paper Scissors</title>
+</head>
+  <body>
+    <p>Rock Paper Scissors</p>
+    <button onclick="
+
+    let computerMove;
+    let message;
+
+    computerMove = chooseComputer();
+
+    if (computerMove === 'rock')
+    {
+      message = 'Tie';
+    }
+    else if (computerMove === 'paper')
+    {
+      message = 'You lose';
+    }
+    else
+    {
+      message = 'You win';
+    }
+    
+    alert(`You picked rock. Computer picked ${computerMove}. ${message}`);
+    
+    ">Rock</button>
+    <button onclick="
+    computerMove = chooseComputer();
+
+    if (computerMove === 'paper')
+    {
+      message = 'Tie';
+    }
+    else if (computerMove === 'scissors')
+    {
+      message = 'You lose';
+    }
+    else
+    {
+      message = 'You win';
+    }
+    
+    alert(`You picked paper. Computer picked ${computerMove}. ${message}`);
+    ">Paper</button>
+    <button
+    onclick="
+    computerMove = chooseComputer();
+
+    if (computerMove === 'scissors')
+    {
+      message = 'Tie';
+    }
+    else if (computerMove === 'rock')
+    {
+      message = 'You lose';
+    }
+    else
+    {
+      message = 'You win';
+    }
+    
+    alert(`You picked scissors. Computer picked ${computerMove}. ${message}`);">Scissors</button>
+    <button>Reset Score</button>
+    
+  </body>
+  <script>
+
+  function chooseComputer()
+  {
+    let randomNum = Math.random();
+
+    if (randomNum < .33)
+    {
+      return 'rock';
+    }
+    else if ( randomNum >= .33 && randomNum < .66)
+    {
+      return 'paper';
+    }
+    else
+    {
+      return 'scissors';
+    }
+  }
+
+  const score =
+  {
+    wins: 0,
+    losses: 0,
+    ties: 0,
+  };
+
+  </script>
+</html>
